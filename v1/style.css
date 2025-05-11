@@ -1,0 +1,74 @@
+:root {
+  --Darkblue: #003b5d;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+p{
+ display: inline-block;
+}
+
+.acess_bar{
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 100px;
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.acess_link{
+  font-family: 'Albert Sans';
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--Darkblue);
+}
+
+.simple_container{
+  display: flex;
+  column-gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .acess_link {
+    font-size: 16px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .acess_bar {
+    flex-direction: column;
+  }
+
+  .simple_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .acess_link {
+    font-size: 14px;
+  }
+}
