@@ -222,6 +222,7 @@ p{
   font-size: 30px;
   font-weight: 900;
   color: white;
+  line-break: 1.2;
 }
 
 
@@ -246,6 +247,7 @@ p{
   font-size: 30px;
   font-weight: 900;
   color: var(--DarkerBlue);
+  line-break: 1.2;
 }
 
 
