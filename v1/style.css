@@ -1,3 +1,4 @@
+/* root variables */
 :root {
   --Darkblue: #003b5d;
 }
@@ -13,7 +14,13 @@ p{
  display: inline-block;
 }
 
-
+/*Fix menu and acess bar on screen*/
+.fixed_bar{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Acess Bar Classes */
 .acess_bar{
@@ -49,13 +56,12 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  height: fit-content;
   background-color: var(--Darkblue);
-}
-
-.menu_separator{
-  height: 5px;
-  background-color: white;
+  
+  border-bottom: solid; /*Separator*/
+  border-radius: 0 0 0 5px;
+  border-color: white;
 }
 
 .menu_logo_container{
@@ -84,7 +90,7 @@ p{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 120px;
 }
 
 .menu_buttons_container{
@@ -109,6 +115,7 @@ p{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .menu_indicator{
@@ -116,16 +123,65 @@ p{
   width: 100%;
   height: 15px;
   border-radius: 20px 20px 0 0;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Content Section */
+
+
+
+
+
+
+
+
+/* ====================== Media Queries ====================== */
+
+/* 1500 intermediate */
+@media (max-width: 1500px) {
+    /* Acess bar */
+  .simple_container{
+    column-gap: 20px;
+  }
+  
+  .acess_bar {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .acess_link {
+    font-size: 20px;
+  }
+  
+  /*Menu*/
+  .menu_font{
+  font-weight: 900;
+  color:white;
+  font-size: 22px ;
+  }
+
+  .menu{
+  height: 85px;
+  }
+
+  .menu_logo{
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+}
+
+.menu_logo_title{
+  color:white;
+  font-weight: 900;
+  font-size: 23px;
+  width: 205px;
 }
 
 
 
+}
 
-
-
-
-
-/*Media Queries */
 
 /* 1200 intermediate */
 @media (max-width: 1200px) {
@@ -144,17 +200,28 @@ p{
   }
 
   /*Menu*/
-  .menu_logo_container{
+  .menu_logo_title{
     display: none;/*removing the logo to fit the menu*/
   }
 
+  .menu_buttons_container{
+    margin-left: 0px;
+  }
 
+  .menu_logo_container{
+    margin-right: 40px;
+  }
 
+  .menu_font{
+  font-weight: 900;
+  color:white;
+  font-size: 26px ;
+  }
 }
 
 
 
-/* Phone */
+/* Tablets 768px*/
 @media (max-width: 768px) {
   /* Acess bar */
   .acess_bar {
@@ -171,5 +238,51 @@ p{
 
   .acess_link {
     font-size: 14px;
+  }
+
+  .menu_font{
+  font-weight: 900;
+  color:white;
+  font-size: 16px ;
+  }
+
+  .menu{
+  height: 50px;
+  }
+
+
+}
+
+
+
+
+
+/* Extra Small [TODO]*/
+@media (max-width: 430px) {
+  /* Acess bar */
+  .acess_bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .simple_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .acess_link {
+    font-size: 12px;
+  }
+
+  .menu_font{
+  font-weight: 900;
+  color:white;
+  font-size: 12px ;
+  }
+
+  .menu{
+  height: 35px;
   }
 }
