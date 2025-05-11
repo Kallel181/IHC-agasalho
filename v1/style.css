@@ -11,6 +11,9 @@ p{
  display: inline-block;
 }
 
+
+
+/* Acess Bar Classes */
 .acess_bar{
   display: flex;
   flex-wrap: wrap;
@@ -21,23 +24,25 @@ p{
   justify-content: center;
   column-gap: 100px;
   row-gap: 10px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .acess_link{
   font-family: 'Albert Sans';
   font-size: 24px;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.2px;
   color: var(--Darkblue);
 }
 
 .simple_container{
   display: flex;
   column-gap: 20px;
+  height: fit-content;
 }
 
 
+/* Menu Classes */
 
 
 
@@ -46,9 +51,19 @@ p{
 
 
 
+/*Media Queries */
 
-
+/* 1200 intermediate */
 @media (max-width: 1200px) {
+  .simple_container{
+  column-gap: 20px;
+  }
+  
+  .acess_bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
   .acess_link {
     font-size: 16px;
   }
@@ -56,16 +71,18 @@ p{
 
 
 
+/* Phone */
 @media (max-width: 768px) {
   .acess_bar {
     flex-direction: column;
+    gap: 20px;
   }
 
   .simple_container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
   }
 
   .acess_link {
