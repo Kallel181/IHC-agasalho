@@ -2,8 +2,6 @@
 :root {
   --Darkblue: #003b5d;
   --Darkblue_light: #005586;
-
-
   --PaleOrange: #ea9a68;
   --DarkerBlue: #00263c;
   --DarkerOrange: #eb7228;
@@ -14,6 +12,8 @@ body{
   display: flex;
   flex-direction: column;
   font-family: 'Albert Sans';
+  font-size: 30px;
+  color: white;
 }
 
 p{
@@ -77,6 +77,8 @@ p{
   border-bottom: solid; /*Separator*/
   border-radius: 0 0 0 5px;
   border-color: white;
+
+  box-shadow: 0 10px 5px -5px black;
 }
 
 .menu_logo_container{
@@ -394,7 +396,6 @@ p{
 
 
 /* ====================== Buttons ====================== */
-
 .button1{
   background-color: var(--Darkblue);
   font-size: 36px;
