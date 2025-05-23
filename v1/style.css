@@ -1,6 +1,9 @@
 /* root variables */
 :root {
   --Darkblue: #003b5d;
+  --Darkblue_light: #005586;
+
+
   --PaleOrange: #ea9a68;
   --DarkerBlue: #00263c;
   --DarkerOrange: #eb7228;
@@ -156,9 +159,9 @@ p{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   width: 100%;
-  padding: 20px 100px 20px 100px;
+  padding: 0px 100px 0px 100px;
   height: fit-content;
 }
 
@@ -185,7 +188,11 @@ p{
 }
 
 .left_image{
-  width: 350px;
+  width: 450px;
+}
+
+.left_image_big{
+  width: 650px;
 }
 
 .section_text_dark{
@@ -352,10 +359,38 @@ p{
 }
 
 
+.center_text{
+  font-family: 'Alata';
+  font-size: 30px;
+  color: white;
+  margin: 20px 160px;
+  text-align: center;
+}
+
+.image_center{
+  width: 550px;
+  border-radius: 20px;
+  margin: 15px;
+}
 
 
+/* ====================== Buttons ====================== */
 
+.button1{
+  background-color: var(--Darkblue);
+  font-size: 36px;
+  font-family: 'Alata';
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+}
 
+.button1:hover{
+  background-color: var(--Darkblue_light);
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 
 
