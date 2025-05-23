@@ -17,7 +17,7 @@ body{
 }
 
 p{
- display: inline-block;
+  display: inline-block;
 }
 
 /* ==================== Lock menu and acess bar on screen ==================== */
@@ -38,16 +38,24 @@ p{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 100px;
+  column-gap: 200px;
   row-gap: 10px;
   padding: 20px;
 }
 
-.acess_link{
+.acess_button{
+  background-color: transparent;
+  border: none;
   font-size: 24px;
   font-weight: 900;
   line-height: 1.2px;
   color: var(--Darkblue);
+  text-decoration: underline;
+}
+
+.acess_button:hover{
+  color: var(--Darkblue_light);
+  cursor: pointer;
 }
 
 .simple_container{
@@ -81,6 +89,10 @@ p{
   column-gap: 10px;
 }
 
+.menu_logo_container:hover{
+  cursor: pointer;
+}
+
 .menu_logo{
   border-radius: 50px;
 }
@@ -110,10 +122,17 @@ p{
   height: 100%;
 }
 
-.menu_font{
+.menu_button{
   font-weight: 900;
   color:white;
   font-size: 36px ;
+  background-color: transparent;
+  border: none;
+}
+
+.menu_button:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .button_holder{
@@ -392,12 +411,77 @@ p{
   text-decoration: underline;
 }
 
+/* ====================== footer ====================== */
+.center_text_footer{
+  font-size: 20px;
+  color: white;
+  font-family: 'Albert Sans';
+  text-align: center;
+  font-weight: 900;
+}
 
+.text_footer{
+  font-size: 20px;
+  color: white;
+  font-family: 'Albert Sans';
+  text-align: start;
+  font-weight: 900;
+}
 
+.column_left_footer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  height: fit-content;
+  justify-content: start;
+  align-items: start;
+  width: 50%;
+  padding-left: 100px;
+}
 
+.column_right_footer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  height: fit-content;
+  justify-content: start;
+  align-items: start;
+  width: 50%;
+  padding-right: 100px;
+  row-gap: 10px;
+}
 
+.social_footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
 
+}
 
+.btn_social{
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  color: white;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Albert Sans';
+  font-size: 20px;
+  font-weight: 900;
+  column-gap: 10px;
+}
+
+.btn_social:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.social_image{
+  width: 30px;
+}
 
 /* ====================== Media Queries ====================== */
 
