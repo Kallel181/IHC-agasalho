@@ -562,6 +562,10 @@ p{
   flex-direction: column;
 }
 
+.section_content_block_start{
+  flex-direction: column;
+}
+
 .menu_buttons_container{
   margin: 20px;
 }
