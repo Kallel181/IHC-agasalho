@@ -52,6 +52,26 @@ document.getElementById("quero_ser_voluntario").onclick = function () {
 };
 }
 
+//Index page btns
+if (document.title =="Quem Somos"){
+document.getElementById("btn_quero_doar").onclick = function () {
+  location.href = "doar.html";
+};}
+
+if (document.title == "Quem Somos"){
+document.getElementById("btn_quero_ser_voluntario").onclick = function () {
+  location.href = "voluntario.html";
+};}
+
+
+//Onde Doar btns
+if (document.title == "Quero Doar"){
+document.getElementById("btn_ver_pontos_doacao").onclick = function () {
+  location.href = "https://www.instagram.com/p/DBKgRbhyb5R/?img_index=1";
+};}
+
+
+
 //Reactive offsetHeight for fixed menu change
 //main_content needs a extra margin top depending on the height of the fixed element
 main_content.style.marginTop = fixed_bar.offsetHeight
@@ -61,3 +81,12 @@ addEventListener("resize", (event) => {
 });
 
 
+
+
+//Footer Social Links 
+document.getElementById("btn_insta").onclick = function () {
+  window.open("https://www.instagram.com/instagasalho/", '_blank').focus();
+}
+document.getElementById("btn_face").onclick = function () {
+  window.open("https://www.facebook.com/campanhadoagasalhouspsc/?locale=pt_BR", '_blank').focus();
+}
