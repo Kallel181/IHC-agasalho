@@ -20,22 +20,37 @@ if (document.title == "Quem Somos"){
   indicator_quero_ser_voluntario.style.visibility = "hidden"
 }
 
-if (document.title == "Quero doar"){
+if (document.title == "Quero Doar"){
   indicator_quem_somos.style.visibility = "hidden"
   indicator_quero_doar.style.visibility = "visible"
   indicator_quero_ser_voluntario.style.visibility = "hidden"
 }
 
-if (document.title == "Quero Ser Voluntário"){
+if (document.title == "Quero ser Voluntário"){
   indicator_quem_somos.style.visibility = "hidden"
   indicator_quero_doar.style.visibility = "hidden"
   indicator_quero_ser_voluntario.style.visibility = "visible"
 }
 
 
-//Reactive imageboard
+//Menu buttons redirect
+if (document.title != "Quem Somos"){
+document.getElementById("btn_quem_somos_menu").onclick = function () {
+  location.href = "index.html";
+};
+}
 
+if (document.title != "Quero Doar"){
+document.getElementById("btn_quero_doar_menu").onclick = function () {
+  location.href = "doar.html";
+};
+}
 
+if (document.title != "Quero ser Voluntário"){
+document.getElementById("quero_ser_voluntario").onclick = function () {
+  location.href = "voluntario.html";
+};
+}
 
 //Reactive offsetHeight for fixed menu change
 //main_content needs a extra margin top depending on the height of the fixed element
