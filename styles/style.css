@@ -508,7 +508,7 @@ ul{
   justify-content: start;
   align-items: start;
   width: 50%;
-  padding-left: 1vw;
+  padding-left: 2.5vw;
 }
 
 .column_right_footer{
@@ -519,7 +519,7 @@ ul{
   justify-content: start;
   align-items: start;
   width: 50%;
-  padding-right: 1vw;
+  padding-right: 2.5vw;
   row-gap: 10px;
 }
 
