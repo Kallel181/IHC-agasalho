@@ -5,14 +5,8 @@
   --PaleOrange: #ea9a68;
   --DarkerBlue: #00263c;
   --DarkerOrange: #eb7228;
-
-
-
   
-
-
-
-  --FontsizeSmall: 14px;
+  --FontsizeSmall: 13px;
 }
 
 html{
@@ -777,11 +771,11 @@ ul{
   }
 
   .left_image_big{
-    width: 300px;
+    width: 290px;
   }
 
   .image_center{
-    width: 300px;
+    width: 290px;
   }
 
   .text_footer{
