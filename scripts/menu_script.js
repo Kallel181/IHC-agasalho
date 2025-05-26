@@ -6,6 +6,8 @@ var indicator_quem_somos = document.getElementById("menu_quem_somos_indicator");
 var indicator_quero_doar = document.getElementById("menu_doar_indicator");
 var indicator_quero_ser_voluntario = document.getElementById("menu_voluntario_indicator");
 
+var menu_logo = document.getElementById("home_logo");
+
 //Indicator tab
 //Show the correct tab for the current page
 indicator_quem_somos.style.visibility = "hidden"
@@ -56,4 +58,12 @@ main_content.style.marginTop = fixed_bar.offsetHeight
 
 addEventListener("resize", (event) => { 
   main_content.style.marginTop = fixed_bar.offsetHeight
+});
+
+
+//Home btn logic -> logo redirect to index.html
+menu_logo.addEventListener('click', (event) => { 
+  if (document.title != "Quem Somos"){
+    location.href = "index.html";
+  }
 });
