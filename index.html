@@ -14,14 +14,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+  
+  <button id="scrollTopBtn" class="scroll-top-btn" title="Voltar ao topo">↑</button>
+  
   <div class="fixed_bar" id="fixed_bar">
     
     <!-- Acess Bar -->
     <div class="acess_bar">
       <div class="simple_container">
-        <button class="acess_button">[1]Ir para menu</button>
-        <button class="acess_button">[2]Ir para conteudo</button>
-        <button class="acess_button">[3]Ir para rodapé</button>
+        <button class="acess_button" id="btn_to_menu">[1]Ir para menu</button>
+        <button class="acess_button" id="btn_to_content">[2]Ir para conteudo</button>
+        <button class="acess_button" id="btn_to_footer">[3]Ir para rodapé</button>
       </div>
       <div class="simple_container">
         <button class="acess_button">A+</button>
@@ -207,7 +210,7 @@
 
 
     <!--Footer-->
-    <div class="blue_section">
+    <div class="blue_section" id="footer">
       <div class="section_content_block">
         <div class="column_left_footer">      
           <p class="text_footer">Campanha do Agasalho USP São Carlos</p>
