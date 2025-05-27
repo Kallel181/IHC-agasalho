@@ -70,7 +70,7 @@ menu_logo.addEventListener('click', (event) => {
 
 
 const scrollBtn = document.getElementById('scrollTopBtn');
-// Mostra o botão quando rolar para baixo
+//Only show scrolltopbtn if user scrolled the page
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
     scrollBtn.style.display = 'block';
@@ -78,7 +78,7 @@ window.addEventListener('scroll', () => {
     scrollBtn.style.display = 'none';
   }
 });
-// Voltar ao topo suavemente
+//go to top behavior
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
