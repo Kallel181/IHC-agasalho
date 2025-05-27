@@ -37,6 +37,34 @@ ul{
   line-height: 35px;
 }
 
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  padding: 10px 16px;
+  font-size: 18px;
+  border: solid;
+  border-radius: 8px;
+
+  background-color: white;
+  color: #000;
+  font-family: 'Alata';
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+
+  display: none; /* começa escondido */
+}
+
+.scroll-top-btn:hover {
+  background-color: #b8b8b8;
+}
+
+
 /* ==================== Lock menu and acess bar on screen ==================== */
 .fixed_bar{
   position: fixed;
