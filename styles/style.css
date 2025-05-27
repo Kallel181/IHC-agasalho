@@ -2,9 +2,12 @@
 :root {
   --Darkblue: #003b5d;
   --Darkblue_light: #005586;
+  --BlueBorder: #0068a5;
+
   --PaleOrange: #ea9a68;
   --DarkerBlue: #00263c;
   --DarkerOrange: #eb7228;
+  --WhiteText: #ffffff;
 
   --FontsizeSmall: 13px;
 }
@@ -20,7 +23,7 @@ body{
   flex-direction: column;
   font-family: 'Albert Sans';
   font-size: 30px;
-  color: white;
+  color: var(--WhiteText);
   overflow-x: hidden;
 }
 
@@ -48,7 +51,7 @@ ul{
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
-  background-color: white;
+  background-color: var(--WhiteText);
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -118,7 +121,7 @@ ul{
 }
 
 .menu_logo_title{
-  color:white;
+  color:var(--WhiteText);
   font-weight: 900;
   font-size: 24px;
   width: 205px;
@@ -144,7 +147,7 @@ ul{
 
 .menu_button{
   font-weight: 900;
-  color:white;
+  color:var(--WhiteText);
   font-size: max(2.0vw, 20px);
   background-color: transparent;
   border: none;
@@ -165,7 +168,7 @@ ul{
 }
 
 .menu_indicator{
-  background-color: white;
+  background-color: var(--WhiteText);
   width: 100%;
   height: 15px;
   border-radius: 20px 20px 0 0;
@@ -278,7 +281,7 @@ ul{
 .section_text_white{
   font-size: max(1.4vw, 20px);
   font-family: 'Alata';
-  color: white;
+  color: var(--WhiteText);
   letter-spacing: 2px;
 }
 
@@ -298,7 +301,7 @@ ul{
   font-size: max(3.5vw,45px);
   font-weight: 900;
   margin: 10px 0 10px 100px;
-  color: white;
+  color: var(--WhiteText);
   word-spacing: 2.5px;
 }
 
@@ -313,7 +316,7 @@ ul{
 .blue_section_big_text{
   font-size: max(2vw, 40px);
   word-spacing: 1.5px;
-  color: white;
+  color: var(--WhiteText);
   font-weight: 900;
   text-align: center;
 }
@@ -344,7 +347,7 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--WhiteText);
   width: 100vw;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -397,9 +400,9 @@ ul{
 
   transform: translateY(-50%);
 
-  background-color: #003b5d;
+  background-color: var(--Darkblue);
   
-  border-color: #0068a5;
+  border-color: var(--BlueBorder);
   border-width: 7px;
   border-radius: 20px;
   border-style: solid;
@@ -409,7 +412,7 @@ ul{
 .image_board_title_text{
   font-size: max(2.0vw, 14px);
   font-family: 'Alata';
-  color: white;
+  color: var(--WhiteText);
   letter-spacing: 2px;
   white-space: nowrap;
 }
@@ -425,7 +428,7 @@ ul{
 
 
 .image_board_lower_text{
-  color: #00243a;
+  color: var(--DarkerBlue);
   font-size: max(2vw, 14px);
   font-family: 'Alata';
   letter-spacing: 2px;
@@ -471,7 +474,7 @@ ul{
   background-color: var(--Darkblue);
   font-size: max(2vw, 25px);
   font-family: 'Alata';
-  color: white;
+  color: var(--WhiteText);
   padding: max(1vw, 8px) max(1vw, 8px);
   border-radius: 1.5rem;
   border: none;
@@ -486,7 +489,7 @@ ul{
 /* ====================== footer ====================== */
 .center_text_footer{
   font-size: 20px;
-  color: white;
+  color: var(--WhiteText);
   font-family: 'Albert Sans';
   text-align: center;
   font-weight: 900;
@@ -494,7 +497,7 @@ ul{
 
 .text_footer{
   font-size: 20px;
-  color: white;
+  color: var(--WhiteText);
   font-family: 'Albert Sans';
   text-align: start;
   font-weight: 900;
@@ -536,7 +539,7 @@ ul{
   display: flex;
   flex-direction: row;
   background: transparent;
-  color: white;
+  color: var(--WhiteText);
   border: none;
   align-items: center;
   justify-content: center;
@@ -563,7 +566,7 @@ ul{
 }
 
 .text_input{
-  height: 40px;
+  height: 50px;
   border: none;
   border-radius: 10px;
   text-align: center;
@@ -811,7 +814,7 @@ ul{
 }
 
 .text_input{
-  height: 30px;
+  height: 40px;
   font-size: 16px;
 }
 }
