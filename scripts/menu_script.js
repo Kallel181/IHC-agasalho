@@ -67,3 +67,18 @@ menu_logo.addEventListener('click', (event) => {
     location.href = "index.html";
   }
 });
+
+
+const scrollBtn = document.getElementById('scrollTopBtn');
+// Mostra o botão quando rolar para baixo
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+});
+// Voltar ao topo suavemente
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
