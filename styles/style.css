@@ -1,7 +1,7 @@
 /* root variables */
 :root {
   --Darkblue: #003b5d;
-  --Darkblue_light: #005586;
+  --Darkblue_light: #0073b6;
   --BlueBorder: #0068a5;
 
   --PaleOrange: #ea9a68;
@@ -80,12 +80,13 @@ ul{
   flex-wrap: wrap;
   height: fit-content;
   background-color: var(--WhiteText);
+  
   flex-direction: row;
   align-items: center;
   justify-content: center;
   column-gap: 200px;
   row-gap: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .acess_button{
@@ -93,12 +94,12 @@ ul{
   border: none;
   font-size: max(1.3vw, 15px);
   font-weight: 900;
-  line-height: 1.2px;
+  
   color: var(--Darkblue);
-  text-decoration: underline;
 }
 
 .acess_button:hover{
+  text-decoration: underline;
   color: var(--Darkblue_light);
   cursor: pointer;
 }
@@ -617,7 +618,6 @@ ul{
   }
   
   .acess_bar {
-    flex-direction: row;
     gap: 20px;
   }
   
@@ -737,14 +737,18 @@ ul{
   .acess_button::after {
     content: attr(data-short);
   }
+
+  .acess_bar{
+    flex-direction: column;
+  }
 }
 
 /* 520 low */
-@media (max-width: 520px) {
+@media (max-width: 550px) {
   .acess_bar{
-    display: none;
+    gap: 10px;
   }
-
+  
   .left_image{
     max-width: 250px;
   }
