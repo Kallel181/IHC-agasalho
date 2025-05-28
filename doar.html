@@ -21,9 +21,10 @@
     <!-- Acess Bar -->
     <div class="acess_bar">
       <div class="simple_container">
-        <button class="acess_button">[1]Ir para menu</button>
-        <button class="acess_button">[2]Ir para conteudo</button>
-        <button class="acess_button">[3]Ir para rodapé</button>
+        <button class="acess_button" data-full="[1]Ir para menu" data-short="[1]Menu" id="btn_to_menu"></button>
+        <button class="acess_button" data-full="[2]Ir para conteudo" data-short="[2]Conteúdo" id="btn_to_content"></button>
+        <button class="acess_button" data-full="[3]Ir para rodapé" data-short="[3]Rodapé" id="btn_to_footer"></button>
+        <button class="acess_button" data-full="[4]Inicio da página" data-short="[4]Início" id="btn_to_top"></button>
       </div>
       <div class="simple_container">
         <button class="acess_button">A+</button>
@@ -130,7 +131,7 @@
 
 
     <!--Footer-->
-    <div class="blue_section">
+    <div class="blue_section" id="footer">
       <div class="section_content_block">
         <div class="column_left_footer">      
           <p class="text_footer">Campanha do Agasalho USP São Carlos</p>
