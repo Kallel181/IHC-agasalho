@@ -732,8 +732,8 @@ ul{
 }
 }
 
-/* 649 alter acess bar options names */
-@media (max-width: 649px) {
+/* 660px alter acess bar options names */
+@media (max-width: 660px) {
   .acess_button::after {
     content: attr(data-short);
   }
