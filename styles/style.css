@@ -1,7 +1,7 @@
 /* root variables */
 :root {
   --Darkblue: #003b5d;
-  --Darkblue_light: #005586;
+  --Darkblue_light: #0073b6;
   --BlueBorder: #0068a5;
 
   --PaleOrange: #ea9a68;
@@ -9,7 +9,11 @@
   --DarkerOrange: #eb7228;
   --WhiteText: #ffffff;
 
-  --FontsizeSmall: 13px;
+  --FontsizeSmall: 16px;
+  
+  --MainContentFontSize: max(1.4vw, 20px);
+  --ImageBoardLowerTextSize: max(1.4vw, 20px);
+  --ImageBoardTitleFontSize: max(1.4vw, 15px);
 }
 
 html{
@@ -80,12 +84,13 @@ ul{
   flex-wrap: wrap;
   height: fit-content;
   background-color: var(--WhiteText);
+  
   flex-direction: row;
   align-items: center;
   justify-content: center;
   column-gap: 200px;
   row-gap: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .acess_button{
@@ -93,12 +98,12 @@ ul{
   border: none;
   font-size: max(1.3vw, 15px);
   font-weight: 900;
-  line-height: 1.2px;
+  
   color: var(--Darkblue);
-  text-decoration: underline;
 }
 
 .acess_button:hover{
+  text-decoration: underline;
   color: var(--Darkblue_light);
   cursor: pointer;
 }
@@ -107,6 +112,10 @@ ul{
   display: flex;
   column-gap: 20px;
   height: fit-content;
+}
+
+.acess_button::after {
+  content: attr(data-full);
 }
 
 
@@ -299,7 +308,7 @@ ul{
 }
 
 .section_text_dark{
-  font-size: max(1.4vw, 20px);
+  font-size: var(--MainContentFontSize);
   font-family: 'Alata';
   color: var(--DarkerBlue);
   letter-spacing: 2px;
@@ -307,8 +316,9 @@ ul{
 }
 
 .section_text_white{
-  font-size: max(1.4vw, 20px);
+  font-size: var(--MainContentFontSize);
   font-family: 'Alata';
+  font-weight: 600;
   color: var(--WhiteText);
   letter-spacing: 2px;
 }
@@ -438,8 +448,9 @@ ul{
 }
 
 .image_board_title_text{
-  font-size: max(2.0vw, 14px);
+  font-size: var(--ImageBoardTitleFontSize);
   font-family: 'Alata';
+  font-weight: 600;
   color: var(--WhiteText);
   letter-spacing: 2px;
   white-space: nowrap;
@@ -457,7 +468,8 @@ ul{
 
 .image_board_lower_text{
   color: var(--DarkerBlue);
-  font-size: max(2vw, 14px);
+  font-size: var(--ImageBoardLowerTextSize);
+  font-weight: 600;
   font-family: 'Alata';
   letter-spacing: 2px;
   text-align: center;
@@ -465,7 +477,6 @@ ul{
 }
 
 .start_text{
-  font-size: max(1.4vw, 20px);
   font-family: 'Alata';
   padding: 20px 80px;
   letter-spacing: 2px;
@@ -613,7 +624,6 @@ ul{
   }
   
   .acess_bar {
-    flex-direction: row;
     gap: 20px;
   }
   
@@ -728,13 +738,23 @@ ul{
 }
 }
 
-
-/* 520 low */
-@media (max-width: 520px) {
-  .acess_bar{
-    display: none;
+/* 660px alter acess bar options names */
+@media (max-width: 660px) {
+  .acess_button::after {
+    content: attr(data-short);
   }
 
+  .acess_bar{
+    flex-direction: column;
+  }
+}
+
+/* 520 low */
+@media (max-width: 550px) {
+  .acess_bar{
+    gap: 10px;
+  }
+  
   .left_image{
     max-width: 250px;
   }
@@ -845,5 +865,8 @@ ul{
   height: 40px;
   font-size: 16px;
 }
-}
 
+.image_board_lower_text{
+  font-size: var(--FontsizeSmall);
+}
+}

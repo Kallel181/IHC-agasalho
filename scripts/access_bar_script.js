@@ -1,7 +1,7 @@
 const btn_to_menu = document.getElementById("btn_to_menu");
 const btn_to_content = document.getElementById("btn_to_content");
 const btn_to_footer = document.getElementById("btn_to_footer");
-
+const btn_to_top = document.getElementById("btn_to_top");
 
 
 const btn_contrast = document.getElementById("btn_contrast");
@@ -50,8 +50,29 @@ function set_default_colors(){
 }
 
 
-//jump Section
+
+//jump Section - button onClick events
+btn_to_menu.onclick = function(){
+  document.getElementById("btn_quem_somos_menu").focus();
+}
 
 btn_to_footer.onclick = function () {
   document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
 }
+
+btn_to_top.onclick = function(){
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+//jump Section - key press
+document.addEventListener("keypress", function(event) {
+  if (event.key == 1) { //btn_to_menu
+    document.getElementById("btn_quem_somos_menu").focus();
+  }
+  if (event.key == 2) { //btn_to_footer
+    document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+  }
+  if (event.key == 3) {//btn_to_top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
