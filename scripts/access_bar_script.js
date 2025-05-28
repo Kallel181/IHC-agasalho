@@ -1,6 +1,7 @@
 const btn_to_menu = document.getElementById("btn_to_menu");
 const btn_to_content = document.getElementById("btn_to_content");
 const btn_to_footer = document.getElementById("btn_to_footer");
+const btn_to_top = document.getElementById("btn_to_top");
 
 
 
@@ -50,8 +51,16 @@ function set_default_colors(){
 }
 
 
+
 //jump Section
+btn_to_menu.onclick = function(){
+  document.getElementById("btn_quem_somos_menu").focus();
+}
 
 btn_to_footer.onclick = function () {
   document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+}
+
+btn_to_top.onclick = function(){
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
