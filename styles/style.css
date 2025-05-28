@@ -9,7 +9,11 @@
   --DarkerOrange: #eb7228;
   --WhiteText: #ffffff;
 
-  --FontsizeSmall: 13px;
+  --FontsizeSmall: 16px;
+  
+  --MainContentFontSize: max(1.4vw, 20px);
+  --ImageBoardLowerTextSize: max(1.4vw, 20px);
+  --ImageBoardTitleFontSize: max(1.4vw, 15px);
 }
 
 html{
@@ -304,7 +308,7 @@ ul{
 }
 
 .section_text_dark{
-  font-size: max(1.4vw, 20px);
+  font-size: var(--MainContentFontSize);
   font-family: 'Alata';
   color: var(--DarkerBlue);
   letter-spacing: 2px;
@@ -312,8 +316,9 @@ ul{
 }
 
 .section_text_white{
-  font-size: max(1.4vw, 20px);
+  font-size: var(--MainContentFontSize);
   font-family: 'Alata';
+  font-weight: 600;
   color: var(--WhiteText);
   letter-spacing: 2px;
 }
@@ -443,8 +448,9 @@ ul{
 }
 
 .image_board_title_text{
-  font-size: max(2.0vw, 14px);
+  font-size: var(--ImageBoardTitleFontSize);
   font-family: 'Alata';
+  font-weight: 600;
   color: var(--WhiteText);
   letter-spacing: 2px;
   white-space: nowrap;
@@ -462,7 +468,8 @@ ul{
 
 .image_board_lower_text{
   color: var(--DarkerBlue);
-  font-size: max(2vw, 14px);
+  font-size: var(--ImageBoardLowerTextSize);
+  font-weight: 600;
   font-family: 'Alata';
   letter-spacing: 2px;
   text-align: center;
@@ -470,7 +477,6 @@ ul{
 }
 
 .start_text{
-  font-size: max(1.4vw, 20px);
   font-family: 'Alata';
   padding: 20px 80px;
   letter-spacing: 2px;
@@ -859,5 +865,8 @@ ul{
   height: 40px;
   font-size: 16px;
 }
-}
 
+.image_board_lower_text{
+  font-size: var(--FontsizeSmall);
+}
+}
