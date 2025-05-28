@@ -109,6 +109,10 @@ ul{
   height: fit-content;
 }
 
+.acess_button::after {
+  content: attr(data-full);
+}
+
 
 /* ==================== Menu Classes ==================== */
 .menu{
@@ -728,6 +732,12 @@ ul{
 }
 }
 
+/* 649 alter acess bar options names */
+@media (max-width: 649px) {
+  .acess_button::after {
+    content: attr(data-short);
+  }
+}
 
 /* 520 low */
 @media (max-width: 520px) {
