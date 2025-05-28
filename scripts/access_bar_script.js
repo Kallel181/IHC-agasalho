@@ -4,7 +4,6 @@ const btn_to_footer = document.getElementById("btn_to_footer");
 const btn_to_top = document.getElementById("btn_to_top");
 
 
-
 const btn_contrast = document.getElementById("btn_contrast");
 
 const root = document.querySelector(':root');
