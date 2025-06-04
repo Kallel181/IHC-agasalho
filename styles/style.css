@@ -617,6 +617,7 @@ ul{
 
 input::placeholder {
   color: #000;
+  opacity: 80%;
 }
 
 
