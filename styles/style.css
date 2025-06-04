@@ -11,9 +11,9 @@
 
   --FontsizeSmall: 16px;
   
-  --MainContentFontSize: max(1.4vw, 20px);
-  --ImageBoardLowerTextSize: max(1.4vw, 20px);
-  --ImageBoardTitleFontSize: max(1.4vw, 15px);
+  --MainContentFontSize: 24px;
+  --ImageBoardLowerTextSize: 24px;
+  --ImageBoardTitleFontSize: 24px;
 }
 
 html{
@@ -493,7 +493,6 @@ ul{
 }
 
 .center_text{
-  font-size: max(1.4vw, 20px);
   font-family: 'Alata';
   padding: 20px 50px;
   letter-spacing: 2px;
@@ -622,6 +621,11 @@ ul{
   .simple_container{
     column-gap: 20px;
   }
+
+  .section_content_block_start{
+  flex-direction: column;
+  align-items: center;
+  }
   
   .acess_bar {
     gap: 20px;
@@ -667,10 +671,6 @@ ul{
   flex-direction: column;
 }
 
-.section_content_block_start{
-  flex-direction: column;
-  align-items: center;
-}
 
 .menu_buttons_container{
   margin: 20px;

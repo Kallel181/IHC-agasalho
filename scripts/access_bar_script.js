@@ -3,11 +3,12 @@ const btn_to_content = document.getElementById("btn_to_content");
 const btn_to_footer = document.getElementById("btn_to_footer");
 const btn_to_top = document.getElementById("btn_to_top");
 
-
 const btn_contrast = document.getElementById("btn_contrast");
 
-const root = document.querySelector(':root');
+const btn_increase_font = document.getElementById("btn_increase_font");
+const btn_decrease_font = document.getElementById("btn_decrease_font");
 
+const root = document.querySelector(':root');
 
 
 //Contrast Change
@@ -76,3 +77,73 @@ document.addEventListener("keypress", function(event) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
+
+
+//Font size change
+const number_of_changes = 6
+
+const absolute_min_small_font_size_px = 16
+const absolute_min_normal_font_size_px = 24
+
+const rate_of_change_px = 2
+
+
+const absolute_max_small_font_size_px = absolute_min_small_font_size_px + (number_of_changes*rate_of_change_px)
+const absolute_max_normal_font_size_px = absolute_min_normal_font_size_px + (number_of_changes*rate_of_change_px)
+
+
+var current_small_font_size_px = 16
+var current_normal_font_size_px = 24
+
+
+
+btn_increase_font.onclick = function(){
+  if(check_valid_font_size_increase()){
+    increase_font_size();
+  }  
+}
+
+btn_decrease_font.onclick = function(){
+  if(check_valid_font_size_decrease()){
+    decrease_font_size();
+  }  
+}
+
+
+function check_valid_font_size_decrease(){
+  if((current_small_font_size_px - rate_of_change_px) < absolute_min_small_font_size_px){
+    return false
+  } else{
+    return true
+  }
+}
+
+function check_valid_font_size_increase(){
+  if((current_small_font_size_px + rate_of_change_px) > absolute_max_small_font_size_px){
+    return false
+  } else{
+    return true
+  }
+}
+
+function increase_font_size(){
+  current_small_font_size_px += rate_of_change_px;
+  current_normal_font_size_px += rate_of_change_px;
+
+  root.style.setProperty('--FontsizeSmall', `${current_small_font_size_px}px`);
+  
+  root.style.setProperty('--MainContentFontSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardLowerTextSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardTitleFontSize', `${current_normal_font_size_px}px`);
+}
+
+function decrease_font_size(){
+  current_small_font_size_px -= rate_of_change_px;
+  current_normal_font_size_px -= rate_of_change_px;
+
+  root.style.setProperty('--FontsizeSmall', `${current_small_font_size_px}px`);
+  
+  root.style.setProperty('--MainContentFontSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardLowerTextSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardTitleFontSize', `${current_normal_font_size_px}px`);
+}
