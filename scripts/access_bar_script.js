@@ -65,18 +65,44 @@ btn_to_top.onclick = function(){
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+
 //jump Section - key press
+//Change can_jump to true if an input element is active and false if an input element is not active
+var can_jump = true
+
+if(document.title === "Quero ser Voluntário"){
+  const input_name = document.getElementById("input_name");
+  const input_email = document.getElementById("input_email");
+  const input_date = document.getElementById("input_date");
+  const input_phone = document.getElementById("input_phone");
+
+  const input_elements_array = [input_name,input_email,input_date,input_phone]
+
+  for(element in input_elements_array){
+    element.addEventListener('focusin', function() {
+      can_jump = false
+    });
+    
+    element.addEventListener('focusout', function() {
+      can_jump = true
+    });
+  }
+}
+
+//Key press behaviour
 document.addEventListener("keypress", function(event) {
-  if (event.key == 1) { //btn_to_menu
+  if (event.key == 1 && can_jump) { //btn_to_menu
     document.getElementById("btn_quem_somos_menu").focus();
   }
-  if (event.key == 2) { //btn_to_footer
+  //Key need to be disabled if input element is acitive
+  if (event.key == 2 && can_jump) { //btn_to_footer
     document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
   }
-  if (event.key == 3) {//btn_to_top
+  if (event.key == 3 && can_jump) {//btn_to_top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
+
 
 
 //Font size change
@@ -155,3 +181,6 @@ function decrease_font_size(){
   root.style.setProperty('--ImageBoardLowerTextSize', `${current_normal_font_size_px}px`);
   root.style.setProperty('--ImageBoardTitleFontSize', `${current_normal_font_size_px}px`);
 }
+
+
+

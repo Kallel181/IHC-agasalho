@@ -1,3 +1,8 @@
+//blur initial date input
+const dateInput = document.querySelector('input[type="date"]');
+dateInput.blur();
+
+
 //Client side check 
 if (document.title == "Quero ser Voluntário"){
   document.addEventListener("DOMContentLoaded", () => {

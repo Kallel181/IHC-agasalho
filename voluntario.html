@@ -123,10 +123,10 @@
         </div>
         <div class="generic_line">
           <form class="form">
-            <input class="text_input" type="text" placeholder="Digite seu Nome">
-            <input class="text_input" type="email" placeholder="Digite seu Email">
-            <input class="text_input" type="date" placeholder="Digite sua aata de Nascimento">
-            <input class="text_input" type="tel" placeholder="Digite seu Telefone">
+            <input class="text_input" type="text" placeholder="Digite seu Nome" id="input_name">
+            <input class="text_input" type="email" placeholder="Digite seu Email" id="input_email">
+            <input class="text_input" type="date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Digite sua data de Nascimento" id="input_date">
+            <input class="text_input" type="tel" placeholder="Digite seu Telefone" id="input_phone">
           </form>
         </div>      
         <div class="generic_line">
@@ -137,7 +137,6 @@
         </div> 
       </div> 
     </div>
-
 
 
     <!--Footer-->
