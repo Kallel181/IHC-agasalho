@@ -80,36 +80,41 @@ document.addEventListener("keypress", function(event) {
 
 
 //Font size change
+
+//maximum ammount of clicks a user can do to change a font size
 const number_of_changes = 6
 
+//Minimum Font size
 const absolute_min_small_font_size_px = 16
 const absolute_min_normal_font_size_px = 24
 
+//rate of change for font size
 const rate_of_change_px = 2
 
-
+//Maximum Font Size
 const absolute_max_small_font_size_px = absolute_min_small_font_size_px + (number_of_changes*rate_of_change_px)
 const absolute_max_normal_font_size_px = absolute_min_normal_font_size_px + (number_of_changes*rate_of_change_px)
 
-
+//Current Font Size [TODO] - get default values from DOM
 var current_small_font_size_px = 16
 var current_normal_font_size_px = 24
 
 
-
+//Click behaviour
 btn_increase_font.onclick = function(){
   if(check_valid_font_size_increase()){
     increase_font_size();
   }  
 }
 
+//Click behaviour
 btn_decrease_font.onclick = function(){
   if(check_valid_font_size_decrease()){
     decrease_font_size();
   }  
 }
 
-
+//check if a reduction on font size is valid
 function check_valid_font_size_decrease(){
   if((current_small_font_size_px - rate_of_change_px) < absolute_min_small_font_size_px){
     return false
@@ -118,6 +123,7 @@ function check_valid_font_size_decrease(){
   }
 }
 
+//Check if a increase on font size is valid
 function check_valid_font_size_increase(){
   if((current_small_font_size_px + rate_of_change_px) > absolute_max_small_font_size_px){
     return false
@@ -126,6 +132,7 @@ function check_valid_font_size_increase(){
   }
 }
 
+//Increase font size on root and variable
 function increase_font_size(){
   current_small_font_size_px += rate_of_change_px;
   current_normal_font_size_px += rate_of_change_px;
@@ -137,6 +144,7 @@ function increase_font_size(){
   root.style.setProperty('--ImageBoardTitleFontSize', `${current_normal_font_size_px}px`);
 }
 
+//decrease font size on root and variable
 function decrease_font_size(){
   current_small_font_size_px -= rate_of_change_px;
   current_normal_font_size_px -= rate_of_change_px;
