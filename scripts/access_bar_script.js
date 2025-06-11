@@ -3,11 +3,12 @@ const btn_to_content = document.getElementById("btn_to_content");
 const btn_to_footer = document.getElementById("btn_to_footer");
 const btn_to_top = document.getElementById("btn_to_top");
 
-
 const btn_contrast = document.getElementById("btn_contrast");
 
-const root = document.querySelector(':root');
+const btn_increase_font = document.getElementById("btn_increase_font");
+const btn_decrease_font = document.getElementById("btn_decrease_font");
 
+const root = document.querySelector(':root');
 
 //Contrast Change
 var is_high = false
@@ -60,15 +61,122 @@ btn_to_top.onclick = function(){
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+
 //jump Section - key press
+//Change can_jump to true if an input element is active and false if an input element is not active
+var can_jump = true
+
+if(document.title === "Quero ser Voluntário"){
+  const input_name = document.getElementById("input_name");
+  const input_email = document.getElementById("input_email");
+  const input_date = document.getElementById("input_date");
+  const input_phone = document.getElementById("input_phone");
+
+  const input_elements_array = [input_name,input_email,input_date,input_phone]
+
+  for(element in input_elements_array){
+    element.addEventListener('focusin', function() {
+      can_jump = false
+    });
+    
+    element.addEventListener('focusout', function() {
+      can_jump = true
+    });
+  }
+}
+
+//Key press behaviour
 document.addEventListener("keypress", function(event) {
-  if (event.key == 1) { //btn_to_menu
+  if (event.key == 1 && can_jump) { //btn_to_menu
     document.getElementById("btn_quem_somos_menu").focus();
   }
-  if (event.key == 2) { //btn_to_footer
+  //Key need to be disabled if input element is acitive
+  if (event.key == 2 && can_jump) { //btn_to_footer
     document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
   }
-  if (event.key == 3) {//btn_to_top
+  if (event.key == 3 && can_jump) {//btn_to_top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
+
+
+
+//Font size change
+
+//maximum ammount of clicks a user can do to change a font size
+const number_of_changes = 6
+
+//Minimum Font size
+const absolute_min_small_font_size_px = 16
+const absolute_min_normal_font_size_px = 24
+
+//rate of change for font size
+const rate_of_change_px = 2
+
+//Maximum Font Size
+const absolute_max_small_font_size_px = absolute_min_small_font_size_px + (number_of_changes*rate_of_change_px)
+const absolute_max_normal_font_size_px = absolute_min_normal_font_size_px + (number_of_changes*rate_of_change_px)
+
+//Current Font Size [TODO] - get default values from DOM
+var current_small_font_size_px = 16
+var current_normal_font_size_px = 24
+
+
+//Click behaviour
+btn_increase_font.onclick = function(){
+  if(check_valid_font_size_increase()){
+    increase_font_size();
+  }  
+}
+
+//Click behaviour
+btn_decrease_font.onclick = function(){
+  if(check_valid_font_size_decrease()){
+    decrease_font_size();
+  }  
+}
+
+//check if a reduction on font size is valid
+function check_valid_font_size_decrease(){
+  if((current_small_font_size_px - rate_of_change_px) < absolute_min_small_font_size_px){
+    return false
+  } else{
+    return true
+  }
+}
+
+//Check if a increase on font size is valid
+function check_valid_font_size_increase(){
+  if((current_small_font_size_px + rate_of_change_px) > absolute_max_small_font_size_px){
+    return false
+  } else{
+    return true
+  }
+}
+
+//Increase font size on root and variable
+function increase_font_size(){
+  current_small_font_size_px += rate_of_change_px;
+  current_normal_font_size_px += rate_of_change_px;
+
+  root.style.setProperty('--FontsizeSmall', `${current_small_font_size_px}px`);
+  
+  root.style.setProperty('--MainContentFontSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardLowerTextSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardTitleFontSize', `${current_normal_font_size_px}px`);
+}
+
+//decrease font size on root and variable
+function decrease_font_size(){
+  current_small_font_size_px -= rate_of_change_px;
+  current_normal_font_size_px -= rate_of_change_px;
+
+  root.style.setProperty('--FontsizeSmall', `${current_small_font_size_px}px`);
+  
+  root.style.setProperty('--MainContentFontSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardLowerTextSize', `${current_normal_font_size_px}px`);
+  root.style.setProperty('--ImageBoardTitleFontSize', `${current_normal_font_size_px}px`);
+}
+
+
+
