@@ -10,7 +10,6 @@ const btn_decrease_font = document.getElementById("btn_decrease_font");
 
 const root = document.querySelector(':root');
 
-
 //Contrast Change
 var is_high = false
 
@@ -34,7 +33,6 @@ function set_high_contrast_colors(){
   document.querySelectorAll('.text_input').forEach(el => {
     el.style.border = '5px solid #000';
   });
-
 }
 
 function set_default_colors(){
@@ -49,8 +47,6 @@ function set_default_colors(){
     el.style.border = 'none';
   });
 }
-
-
 
 //jump Section - button onClick events
 btn_to_menu.onclick = function(){
