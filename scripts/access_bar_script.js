@@ -27,7 +27,7 @@ function set_high_contrast_colors(){
   root.style.setProperty('--DarkerBlue', '#000000');
   root.style.setProperty('--PaleOrange', '#ffffff');
   root.style.setProperty('--DarkerOrange', '#000000');
-  root.style.setProperty('--BlueBorder', '#000000');
+  root.style.setProperty('--BlueBorder', '#2b2b2b');
   root.style.setProperty('--Darkblue_light', '#2b2b2b');
 
   document.querySelectorAll('.text_input').forEach(el => {
