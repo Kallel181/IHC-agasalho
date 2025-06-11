@@ -72,17 +72,38 @@ if(document.title === "Quero ser Voluntário"){
   const input_date = document.getElementById("input_date");
   const input_phone = document.getElementById("input_phone");
 
-  const input_elements_array = [input_name,input_email,input_date,input_phone]
-
-  for(element in input_elements_array){
-    element.addEventListener('focusin', function() {
-      can_jump = false
-    });
+  input_name.addEventListener('focusin', function() {
+    can_jump = false
+  });
     
-    element.addEventListener('focusout', function() {
-      can_jump = true
-    });
-  }
+  input_name.addEventListener('focusout', function() {
+    can_jump = true
+  });
+
+  input_email.addEventListener('focusin', function() {
+    can_jump = false
+  });
+    
+  input_email.addEventListener('focusout', function() {
+    can_jump = true
+  });
+
+  input_date.addEventListener('focusin', function() {
+    can_jump = false
+  });
+    
+  input_date.addEventListener('focusout', function() {
+    can_jump = true
+  });
+
+  input_phone.addEventListener('focusin', function() {
+    can_jump = false
+  });
+    
+  input_phone.addEventListener('focusout', function() {
+    can_jump = true
+  });
+
 }
 
 //Key press behaviour
