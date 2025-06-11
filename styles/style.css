@@ -790,6 +790,15 @@ label{
   .acess_bar{
     flex-direction: column;
   }
+
+  label{
+  margin-top: 10px;
+  font-size: var(--FontsizeSmall);
+  font-family: 'Alata';
+  color: var(--DarkerBlue);
+  letter-spacing: 2px;
+  font-weight: 600;
+}
 }
 
 /* 520 low */
@@ -885,7 +894,7 @@ label{
   }
 
 .start_text{
-  padding: 10px 10px;
+  padding: 10px 25px;
 }
 
 .extra_side_padding{
