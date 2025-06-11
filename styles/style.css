@@ -439,8 +439,10 @@ ul{
   align-items: center;
   justify-content: center;
   width: fit-content;
+  text-wrap: wrap;
+  max-width: 100%;
 
-  transform: translateY(-50%);
+  transform: translateY(-2vw);
 
   background-color: var(--Darkblue);
   
@@ -457,7 +459,8 @@ ul{
   font-weight: 600;
   color: var(--WhiteText);
   letter-spacing: 2px;
-  white-space: nowrap;
+  white-space: wrap;
+  text-align: center;
 }
 
 
