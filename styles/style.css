@@ -629,6 +629,19 @@ input::placeholder {
   opacity: 80%;
 }
 
+input:hover{
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+label{
+  margin-top: 10px;
+  font-size: var(--MainContentFontSize);
+  font-family: 'Alata';
+  color: var(--DarkerBlue);
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
 
 /* ====================== Media Queries ====================== */
 /* 1500 intermediate */
@@ -781,6 +794,15 @@ input::placeholder {
   .acess_bar{
     flex-direction: column;
   }
+
+  label{
+  margin-top: 10px;
+  font-size: var(--FontsizeSmall);
+  font-family: 'Alata';
+  color: var(--DarkerBlue);
+  letter-spacing: 2px;
+  font-weight: 600;
+}
 }
 
 /* 520 low */
@@ -876,7 +898,7 @@ input::placeholder {
   }
 
 .start_text{
-  padding: 10px 10px;
+  padding: 10px 25px;
 }
 
 .extra_side_padding{
